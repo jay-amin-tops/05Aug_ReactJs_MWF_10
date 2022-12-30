@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Seven primitive data types:
+            <ul>
+                <li><code>number</code> for numbers of any kind: integer or floating-point, integers are limited by
+                    <code>±(2<sup>53</sup>-1)</code>.</li>
+                <li><code>bigint</code> for integer numbers of arbitrary length.</li>
+                <li><code>string</code> for strings. A string may have zero or more characters, there’s no separate
+                    single-character type.</li>
+                <li><code>boolean</code> for <code>true</code>/<code>false</code>.</li>
+                <li><code>null</code> for unknown values – a standalone type that has a single value <code>null</code>.
+                </li>
+                <li><code>undefined</code> for unassigned values – a standalone type that has a single value
+                    <code>undefined</code>.</li>
+                <li><code>symbol</code> for unique identifiers.</li>
+            </ul>
+        </li>
+        <li>And one non-primitive data type:
+            <ul>
+                <li><code>object</code> for more complex data structures.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <table border="1" align="center">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th><code>typeof</code> return value</th>
+            <th>Object wrapper</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#null_type">Null</a></td>
+            <td><code>"object"</code></td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><a href="#undefined_type">Undefined</a></td>
+            <td><code>"undefined"</code></td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><a href="#boolean_type">Boolean</a></td>
+            <td><code>"boolean"</code></td>
+            <td><a href="#Boolean"><code>Boolean</code></a></td>
+          </tr>
+          <tr>
+            <td><a href="#number_type">Number</a></td>
+            <td><code>"number"</code></td>
+            <td><a href="#Number"><code>Number</code></a></td>
+          </tr>
+          <tr>
+            <td><a href="#bigint_type">BigInt</a></td>
+            <td><code>"bigint"</code></td>
+            <td><a href="#BigInt"><code>BigInt</code></a></td>
+          </tr>
+          <tr>
+            <td><a href="#string_type">String</a></td>
+            <td><code>"string"</code></td>
+            <td><a href="#String"><code>String</code></a></td>
+          </tr>
+          <tr>
+            <td><a href="#symbol_type">Symbol</a></td>
+            <td><code>"symbol"</code></td>
+            <td><a href="#Symbol"><code>Symbol</code></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <script>
+        var value = null
+        console.log(value);
+
+        typeof undefined // "undefined"
+
+        typeof 0 // "number"
+
+        typeof 10n // "bigint"
+
+        typeof true // "boolean"
+
+        typeof "foo" // "string"
+
+        typeof Symbol("id") // "symbol"
+
+        typeof Math // "object"  (1)
+
+        typeof null // "object"  (2)
+
+        typeof alert // "function"  (3)
+      </script>
+</body>
+
+</html>
