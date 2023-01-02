@@ -12,13 +12,32 @@
     <script>
         // let user = null;
         let user = "Test";
+        var uservar = "Test";
+        
+        function test(params) {
+            let userInsideFun = "Test";
+            var uservarInsideFun = "Test";
+            console.log(user); 
+            console.log(uservar); 
+            console.log(userInsideFun); 
+            console.log(uservarInsideFun); 
+        }
+        // console.log(userInsideFun); 
+        // console.log(uservarInsideFun); 
+
+        if (user == "Test") {
+            console.log("inside if");
+        } else {
+            console.log("inside else");
+        }
         // if (user) {
-        //     if (user == "Test") {
-        //         console.log("inside if");
-        //     }else{
-        //         console.log("inside else");
-        //     }
+            // if (user == "Test") {
+            //     console.log("inside if");
+            // } else {
+            //     console.log("inside else");
+            // }
         // }
+        // response= (condition) ?"true blog" : "false blog"
         // response= (user == "Test") ?"inside ternary if" : "inside ternary else"
         // console.log(response);
 

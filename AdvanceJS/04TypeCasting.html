@@ -16,6 +16,20 @@
     <p>Numeric Conversion - Occurs in math operations. Can be performed with Number(value).</p> 
     
     <p>The conversion follows the rules:</p> 
+    <input type="text" name="val1" id="val1">
+    <input type="text" name="val2" id="val2">
+    <!-- <input onclick="clickHandle()" type="button" name="btn" id="btn"> -->
+    <input type="button" value="Add" name="btn" id="btn">
+    <script>
+        document.getElementById("btn").addEventListener("click",function () {
+            let v1 = document.getElementById("val1").value
+            let v2 = document.getElementById("val2").value
+            console.log(v1);
+            console.log(v2);
+            console.log(parseFloat(v1)+parseInt(v2));
+            // console.log("called");
+        })
+    </script>
     <table>
         <thead>
             <tr>
@@ -45,15 +59,15 @@
         </tbody>
     </table>
     <script>
-        let value = true;
-        alert(typeof value); // boolean
+        // let value = true;
+        // alert(typeof value); // boolean
 
-        value = String(value); // now value is a string "true"
-        alert(typeof value); // string
+        // value = String(value); // now value is a string "true"
+        // alert(typeof value); // string
 
-        a = "50"
-        parseFloat(a)
-        parseInt(a)
+        // a = "50"
+        // parseFloat(a)
+        // parseInt(a)
     </script>
 </body>
 

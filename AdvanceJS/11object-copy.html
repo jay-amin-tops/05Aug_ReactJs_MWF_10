@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = { name: "John" };
+        let permissions1 = { canView: true };
+        let permissions2 = { canEdit: true };
+        // copies all properties from permissions1 and permissions2 into user
+        Object.assign(user, permissions1, permissions2);
+        console.log(user);
+
+        let userObject = {
+            name: "John",
+            sizes: {
+                height: 182,
+                width: 50
+            }
+        };
+
+        let clone = structuredClone(userObject);
+        console.log(userObject);
+        console.log(clone);
+        alert( user.sizes === clone.sizes ); // false, different objects
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        Objects are associative arrays with several special features.
+
+        They store properties (key-value pairs), where:
+
+        Property keys must be strings or symbols (usually strings).
+        Values can be of any type.
+        To access a property, we can use:
+
+        The dot notation: obj.property.
+        Square brackets notation obj["property"]. Square brackets allow taking the key from a variable, like obj[varWithKey].
+        Additional operators:
+
+        To delete a property: delete obj.prop.
+        To check if a property with the given key exists: "key" in obj.
+        To iterate over an object: for (let key in obj) loop.
+        What we’ve studied in this chapter is called a “plain object”, or just Object.
+
+        There are many other kinds of objects in JavaScript:
+
+        Array to store ordered data collections,
+        Date to store the information about the date and time,
+        Error to store the information about an error.
+        …And so on.
+        They have their special features that we’ll study later. Sometimes people say something like “Array type” or “Date type”, but formally they are not types of their own, but belong to a single “object” data type. And they extend it in various ways.
+
+        Objects in JavaScript are very powerful. Here we’ve just scratched the surface of a topic that is really huge. We’ll be closely working with objects and learning more about them in further parts of the tutorial.
+
+
+        Functions that are stored in object properties are called “methods”.
+        Methods allow objects to “act” like object.doSomething().
+        Methods can reference the object as this.
+        The value of this is defined at run-time.
+
+        When a function is declared, it may use this, but that this has no value until the function is called.
+        A function can be copied between objects.
+        When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
+        Please note that arrow functions are special: they have no this. When this is accessed inside an arrow function, it is taken from outside.
+    </pre>
+
+
+    <h2><a class="main__anchor" name="summary" href="#summary">Summary</a></h2>
+    <p>Objects are associative arrays with several special features.</p>
+    <p>They store properties (key-value pairs), where:</p>
+    <ul>
+        <li>Property keys must be strings or symbols (usually strings).</li>
+        <li>Values can be of any type.</li>
+    </ul>
+    <p>To access a property, we can use:</p>
+    <ul>
+        <li>The dot notation: <code>obj.property</code>.</li>
+        <li>Square brackets notation <code>obj[&quot;property&quot;]</code>. Square brackets allow taking the key from a
+            variable, like <code>obj[varWithKey]</code>.</li>
+    </ul>
+    <p>Additional operators:</p>
+    <ul>
+        <li>To delete a property: <code>delete obj.prop</code>.</li>
+        <li>To check if a property with the given key exists: <code>&quot;key&quot; in obj</code>.</li>
+        <li>To iterate over an object: <code>for (let key in obj)</code> loop.</li>
+    </ul>
+    <p>What we’ve studied in this chapter is called a “plain object”, or just <code>Object</code>.</p>
+    <p>There are many other kinds of objects in JavaScript:</p>
+    <ul>
+        <li><code>Array</code> to store ordered data collections,</li>
+        <li><code>Date</code> to store the information about the date and time,</li>
+        <li><code>Error</code> to store the information about an error.</li>
+        <li>…And so on.</li>
+    </ul>
+    <p>They have their special features that we’ll study later. Sometimes people say something like “Array type” or
+        “Date type”, but formally they are not types of their own, but belong to a single “object” data type. And they
+        extend it in various ways.</p>
+    <p>Objects in JavaScript are very powerful. Here we’ve just scratched the surface of a topic that is really huge.
+        We’ll be closely working with objects and learning more about them in further parts of the tutorial.</p>
+    </div>
+    </article>
+    <div class="tasks formatted">
+        <h2 class="tasks__title" id="tasks"><a class="tasks__title-anchor main__anchor main__anchor main__anchor_noicon"
+                href="#tasks">Tasks</a></h2>
+        <div class="task tasks__task">
+            <div class="task__header">
+                <div class="task__title-wrap">
+                    <h3 class="task__title"><a class="main__anchor" href="#hello-object" name="hello-object">Hello,
+                            object</a></h3><a class="task__open-link" href="/task/hello-object" target="_blank"></a>
+                </div>
+                <div class="task__header-note"><span class="task__importance"
+                        title="How important is the task, from 1 to 5">importance: 5</span></div>
+                <div class="task__content">
+                    <div class="task__formatted">
+                        <p>Write the code, one line for each action:</p>
+                        <ol>
+                            <li>Create an empty object <code>user</code>.</li>
+                            <li>Add the property <code>name</code> with the value <code>John</code>.</li>
+                            <li>Add the property <code>surname</code> with the value <code>Smith</code>.</li>
+                            <li>Change the value of the <code>name</code> to <code>Pete</code>.</li>
+                            <li>Remove the property <code>name</code> from the object.</li>
+                        </ol>
+                    </div><button class="task__solution" type="button">solution</button>
+                    <div class="task__answer">
+                        <div class="task__answer-content">
+                            <div class="formatted">
+                                <div id="4mz15jkyt9" data-trusted="1" class="code-example">
+                                    <div class="codebox code-example__codebox">
+
+                                        <div class="codebox__code" data-code="1">
+                                            <pre class="line-numbers language-javascript"><code>let user = {};
+user.name = &quot;John&quot;;
+user.surname = &quot;Smith&quot;;
+user.name = &quot;Pete&quot;;
+delete user.name;</code></pre>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><button class="close-button task__answer-close" type="button" title="close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task tasks__task">
+            <div class="task__header">
+                <div class="task__title-wrap">
+                    <h3 class="task__title"><a class="main__anchor" href="#check-for-emptiness"
+                            name="check-for-emptiness">Check for emptiness</a></h3><a class="task__open-link"
+                        href="/task/is-empty" target="_blank"></a>
+                </div>
+                <div class="task__header-note"><span class="task__importance"
+                        title="How important is the task, from 1 to 5">importance: 5</span></div>
+                <div class="task__content">
+                    <div class="task__formatted">
+                        <p>Write the function <code>isEmpty(obj)</code> which returns <code>true</code> if the object
+                            has no properties, <code>false</code> otherwise.</p>
+                        <p>Should work like that:</p>
+                        <div id="wk6y47x9re" data-trusted="1" class="code-example">
+                            <div class="codebox code-example__codebox">
+
+                                <div class="codebox__code" data-code="1">
+                                    <pre class="line-numbers language-javascript"><code>let schedule = {};
+
+alert( isEmpty(schedule) ); // true
+
+schedule[&quot;8:30&quot;] = &quot;get up&quot;;
+
+alert( isEmpty(schedule) ); // false</code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p><a href="https://plnkr.co/edit/OABZFsveJ4UTBLtz?p=preview" target="_blank"
+                                data-plunk-id="OABZFsveJ4UTBLtz">Open a sandbox with tests.</a></p>
+                    </div><button class="task__solution" type="button">solution</button>
+                    <div class="task__answer">
+                        <div class="task__answer-content">
+                            <div class="formatted">
+                                <p>Just loop over the object and <code>return false</code> immediately if there’s at
+                                    least one property.</p>
+                                <div id="cxgswp2piw" data-trusted="1" class="code-example">
+                                    <div class="codebox code-example__codebox">
+
+                                        <div class="codebox__code" data-code="1">
+                                            <pre class="line-numbers language-javascript"><code>function isEmpty(obj) {
+  for (let key in obj) {
+    // if the loop has started, there is a property
+    return false;
+  }
+  return true;
+}</code></pre>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <p><a href="https://plnkr.co/edit/zHDueHHp9F5yT8ry?p=preview" target="_blank"
+                                        data-plunk-id="zHDueHHp9F5yT8ry">Open the solution with tests in a sandbox.</a>
+                                </p>
+                            </div>
+                        </div><button class="close-button task__answer-close" type="button" title="close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task tasks__task">
+            <div class="task__header">
+                <div class="task__title-wrap">
+                    <h3 class="task__title"><a class="main__anchor" href="#sum-object-properties"
+                            name="sum-object-properties">Sum object properties</a></h3><a class="task__open-link"
+                        href="/task/sum-object" target="_blank"></a>
+                </div>
+                <div class="task__header-note"><span class="task__importance"
+                        title="How important is the task, from 1 to 5">importance: 5</span></div>
+                <div class="task__content">
+                    <div class="task__formatted">
+                        <p>We have an object storing salaries of our team:</p>
+                        <div id="0heddrceld" data-trusted="1" class="code-example">
+                            <div class="codebox code-example__codebox">
+
+                                <div class="codebox__code" data-code="1">
+                                    <pre class="line-numbers language-javascript"><code>let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}</code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Write the code to sum all salaries and store in the variable <code>sum</code>. Should be
+                            <code>390</code> in the example above.
+                        </p>
+                        <p>If <code>salaries</code> is empty, then the result must be <code>0</code>.</p>
+                    </div><button class="task__solution" type="button">solution</button>
+                    <div class="task__answer">
+                        <div class="task__answer-content">
+                            <div class="formatted">
+                                <div id="7n32sbpg3v" data-trusted="1" class="code-example">
+                                    <div class="codebox code-example__codebox">
+
+                                        <div class="toolbar codebox__toolbar">
+                                            <div class="toolbar__tool">
+                                                <a href="#" title="run" data-action="run"
+                                                    class="toolbar__button toolbar__button_run"></a>
+                                            </div>
+                                            <div class="toolbar__tool">
+                                                <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                                                    class="toolbar__button toolbar__button_edit"></a>
+                                            </div>
+                                        </div>
+                                        <div class="codebox__code" data-code="1">
+                                            <pre class="line-numbers language-javascript"><code>let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+};
+
+let sum = 0;
+for (let key in salaries) {
+  sum += salaries[key];
+}
+
+alert(sum); // 390</code></pre>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><button class="close-button task__answer-close" type="button" title="close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task tasks__task">
+            <div class="task__header">
+                <div class="task__title-wrap">
+                    <h3 class="task__title"><a class="main__anchor" href="#multiply-numeric-property-values-by-2"
+                            name="multiply-numeric-property-values-by-2">Multiply numeric property values by 2</a></h3>
+                    <a class="task__open-link" href="/task/multiply-numeric" target="_blank"></a>
+                </div>
+                <div class="task__header-note"><span class="task__importance"
+                        title="How important is the task, from 1 to 5">importance: 3</span></div>
+                <div class="task__content">
+                    <div class="task__formatted">
+                        <p>Create a function <code>multiplyNumeric(obj)</code> that multiplies all numeric property
+                            values of <code>obj</code> by <code>2</code>.</p>
+                        <p>For instance:</p>
+                        <div id="70byn82u8q" data-trusted="1" class="code-example">
+                            <div class="codebox code-example__codebox">
+
+                                <div class="codebox__code" data-code="1">
+                                    <pre class="line-numbers language-javascript"><code>// before the call
+let menu = {
+  width: 200,
+  height: 300,
+  title: &quot;My menu&quot;
+};
+
+multiplyNumeric(menu);
+
+// after the call
+menu = {
+  width: 400,
+  height: 600,
+  title: &quot;My menu&quot;
+};</code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Please note that <code>multiplyNumeric</code> does not need to return anything. It should
+                            modify the object in-place.</p>
+                        <p>P.S. Use <code>typeof</code> to check for a number here.</p>
+                        <p><a href="https://plnkr.co/edit/xQj2B2R6LQJPhUrs?p=preview" target="_blank"
+                                data-plunk-id="xQj2B2R6LQJPhUrs">Open a sandbox with tests.</a></p>
+                    </div><button class="task__solution" type="button">solution</button>
+                    <div class="task__answer">
+                        <div class="task__answer-content">
+                            <div class="formatted">
+                                <div id="ra914z9hgy" data-trusted="1" class="code-example">
+                                    <div class="codebox code-example__codebox">
+
+                                        <div class="codebox__code" data-code="1">
+                                            <pre class="line-numbers language-javascript"><code>function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+}</code></pre>
+                                            <script>
+                                                // let userObj = new Object("testing"); // "object constructor" syntax
+                                                let userObj = new Object({ "username": "data" }); // "object constructor" syntax
+                                                console.log(userObj);
+                                                console.log(userObj.username);
+                                                let user = { "username": "data" };  // "object literal" syntax
+                                                console.log(user);
+                                                console.log(user.username);
+                                                // data = "testing"
+                                                // html = "<li>"+data +"</li>"
+                                                // html = `<li>${data}</li>`
+
+                                                // Square brackets in Object
+
+                                                user["likes birds"] = true;
+                                                // console.log(user."likes birds");
+                                                console.log(user);
+                                                console.log(user["likes birds"]);
+
+                                                delete user["likes birds"];
+
+                                                console.log(user);
+
+
+                                                // let fruit = prompt("Which fruit to buy?", "apple");
+                                                // let bag = {};
+
+                                                // take property name from the fruit variable
+                                                // bag[fruit] = 5;
+                                                // console.log(bag);
+                                                // console.log(bag.apple);
+
+                                                let obj = {};
+                                                obj.__proto__ = 5; // assign a number
+                                                console.log(obj.__proto__); // [object Object] - the value is an object, didn't work as intended
+
+                                                let userdataforin = { name: "John", age: 30 };
+
+                                                console.log("age" in userdataforin); // true, user.age exists
+                                                console.log("blabla" in userdataforin); // false, user.blabla doesn't exist
+
+
+                                                let userForLoop = {
+                                                    name: "John",
+                                                    age: 30,
+                                                    isAdmin: true
+                                                };
+                                                // userForLoop.forEach(element => {
+                                                //     console.log(element);
+                                                // });
+                                                // Object.entries(userForLoop).map((data)=>{
+                                                //     console.log(data);
+                                                // })
+                                                // Object.values(userForLoop).map((data)=>{
+                                                //     console.log(data);
+                                                // })
+                                                // Object.keys(userForLoop).map((data)=>{
+                                                //     console.log(data);
+                                                // })
+                                                // console.log( Array.from(userForLoop));
+                                                // Array.from(userForLoop).map((data)=>{
+                                                //     console.log(data);
+                                                // })
+                                                console.log("for in");
+                                                for (const key in userForLoop) {
+                                                    console.log("Key is :", key, " and Value is ", userForLoop[key]);
+                                                    // console.log(userForLoop[key]);
+                                                }
+                                                for (const iterator of Object.entries(userForLoop)) {
+                                                    console.log(iterator);
+                                                    console.log(iterator[0]);
+                                                    console.log(iterator[1]);
+                                                }
+                                            </script>
+</body>
+
+</html>
