@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class MathOp{
+            Addition(a,b) {
+                console.log("parent Method");
+                return a+b
+            }
+        }
+       
+        class AdvMathOp extends MathOp{
+            Addition(x){
+                console.log("child Method");
+                // let sum = this.Addition(x,y)
+                // return sum/2
+            }
+            Addition(x){
+                console.log("other child Method");
+                // let sum = this.Addition(x,y)
+                // return sum/2
+            }
+        }
+        let AdvMathOpObj =new AdvMathOp;
+        // console.log(AdvMathOpObj.Average());
+        console.log(AdvMathOpObj.Addition(80,20));
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+    <h2>inheritance</h2>
+    <ul>
+        <li>Simple/single</li>
+        <li>multiple</li>
+        <li>multi-level</li>
+        <li>hybride</li>
+        <li>hierarchical</li>
+    </ul>
+    <script>
+        class MathOp{
+            Addition(a,b) {
+                return a+b
+            }
+        }
+       
+        class AdvMathOp extends MathOp{
+            Average(x,y){
+                let sum = this.Addition(x,y)
+                return sum/2
+            }
+        }
+        let AdvMathOpObj =new AdvMathOp;
+        // console.log(AdvMathOpObj.Average());
+        console.log(AdvMathOpObj.Average(80,20));
+    </script>
+</body>
+</html>
