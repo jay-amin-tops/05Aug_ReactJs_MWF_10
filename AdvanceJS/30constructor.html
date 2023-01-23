@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>constructor is a method whic is invokde by default when object are created</p>
+    <script>
+        class User {
+            constructor(name) {
+                console.log("called constructor");
+                this.name = name;
+                console.log(name);
+            }
+            sayHi() {
+                alert(`Hello ${this.name}`);
+            }
+        }
+        let objectUser = new User("TOPS");
+        // objectUser.sayHi()
+        // console.log(objectUser);
+    </script>
+</body>
+</html>

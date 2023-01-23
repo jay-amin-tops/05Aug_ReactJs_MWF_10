@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>In JavaScript we can only inherit from a single object. There can be only one [[Prototype]] for an object. And a
+        class may extend only one other class.</p>
+
+    <p>But sometimes that feels limiting. For instance, we have a class StreetSweeper and a class Bicycle, and want to
+        make their mix: a StreetSweepingBicycle.</p>
+
+    <p>Or we have a class User and a class EventEmitter that implements event generation, and we’d like to add the
+        functionality of EventEmitter to User, so that our users can emit events.</p>
+    <script>
+        // mixin
+        let sayHiMixin = {
+            sayHi() {
+                alert(`Hello ${this.name}`);
+            },
+            sayBye() {
+                alert(`Bye ${this.name}`);
+            }
+        };
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+        Object.assign(User.prototype, sayHiMixin);
+        new User("Dude").sayHi(); // Hello Dude!
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>A callback function is a function passed into another function as an argument, which is then invoked inside the
+        outer function to complete some kind of routine or action.</p>
+    <script>
+        function callbackfunc(a) {
+            console.log("callbackfunc",a);
+        }
+        function mainfunction(cllbk) {
+            console.log("mainfunction");
+            const name = "testing"
+            callbackfunc(name)
+            // setTimeout(() => {
+            //     callbackfunc()
+            // }, 2000);
+            setTimeout(() => {
+                cllbk(name)
+            }, 2000);
+        }
+
+
+        mainfunction(callbackfunc)
+
+        // function greeting(name) {
+        //     alert(`Hello, ${name}`);
+        // }
+
+        // function processUserInput(callback) {
+        //     const name = prompt("Please enter your name.");
+        //     callback(name);
+        // }
+
+        // processUserInput(greeting);
+    </script>
+
+</body>
+
+</html>
