@@ -14,8 +14,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 <HeaderCom/>
 <Koibhi/>
 </div> */}
-root.render(\
-
-<RouterProvider router={MainRouter} />
-);
+root.render(<RouterProvider router={MainRouter} />);
 

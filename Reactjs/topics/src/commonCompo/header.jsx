@@ -22,7 +22,7 @@ export default function HeaderCompo() {
 
   return (
     <>
-    <MDBNavbar expand='lg' light bgColor='light'>
+    {/* <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
 
@@ -75,7 +75,7 @@ export default function HeaderCompo() {
           </form>
         </MDBCollapse>
       </MDBContainer>
-    </MDBNavbar>
+    </MDBNavbar> */}
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
@@ -101,7 +101,7 @@ export default function HeaderCompo() {
               <Link className='nav-link' to='/about'>About </Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+              <Link className='nav-link' to='/examples'>Example </Link>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
@@ -117,11 +117,11 @@ export default function HeaderCompo() {
               </MDBDropdown>
             </MDBNavbarItem>
 
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
                 Disabled
               </MDBNavbarLink>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
           </MDBNavbarNav>
 
           <form className='d-flex input-group w-auto'>
