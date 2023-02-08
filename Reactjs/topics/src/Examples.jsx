@@ -18,7 +18,7 @@ const Examples = () => {
 
 
             <div className="row my-3">
-                <div className="col-md-6 offset-md-3">
+                <div className="col-md-12">
                     <Outlet></Outlet>
                 </div>
             </div>
