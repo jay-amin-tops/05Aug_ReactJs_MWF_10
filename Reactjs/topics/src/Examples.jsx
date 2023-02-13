@@ -7,7 +7,7 @@ const Examples = () => {
             <div className="row">
                 <div className="col-6">
                     <h3>
-                        <Link to="classcompo">Class Component</Link>
+                        <Link to="/examples/classcompo">Class Component</Link>
                     </h3>
 
                 </div>
@@ -16,6 +16,9 @@ const Examples = () => {
                 </div>
             </div>
 
+            <h3>
+                <Link to="othercompo">Extra</Link>
+            </h3>
 
             <div className="row my-3">
                 <div className="col-md-12">

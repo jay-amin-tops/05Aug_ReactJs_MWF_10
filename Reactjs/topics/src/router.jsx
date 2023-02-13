@@ -3,6 +3,7 @@ import HeaderCompo from "./commonCompo/header"
 import HomeCompo from "./Home"
 import About from "./About.jsx"
 import Examples from "./Examples.jsx"
+import Othercompo from "./Othercompo.jsx"
 import React, { Suspense } from 'react';
 
 // const ClassCompoRoute = React.lazy(()=>{ return import('./component/ClassCompo/ClassCompoRouter')});
@@ -24,7 +25,10 @@ const MainRouter = createBrowserRouter([
             {
                 path: "classcompo/*",
                 element:<Suspense fallback={<h2>Loading...</h2>}> <ClassCompoRoute/></Suspense>,
-            },
+            },{
+                path: "othercompo",
+                element:<Othercompo/>,
+            }
         ]
     },
 ]);
