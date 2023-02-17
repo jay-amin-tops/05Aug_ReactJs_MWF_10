@@ -13,6 +13,7 @@ import UnControlledComponent from './09UnControlledCompoInClassCompo';
 import SpreadVsRestCompo from './10SpreadVsRestCompo';
 import CompositionVsInheritance from './11CompositionVsInheritance';
 import StateLifting from './14stateLifting/Mainfile';
+import HOC from './17HocClassCompo/HocClassCompo';
 
 class ClassCompoRouter extends Component {
     render() {
@@ -32,6 +33,7 @@ class ClassCompoRouter extends Component {
                     <Route path="spreadvsrest" element={<SpreadVsRestCompo />} />
                     <Route path="compositionvsinheritance" element={<CompositionVsInheritance />} />
                     <Route path="statelifting" element={<StateLifting />} />
+                    <Route path="hoc" element={<HOC />} />
                 </Route>
             </Routes>
             </>

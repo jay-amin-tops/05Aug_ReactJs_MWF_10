@@ -12,13 +12,13 @@ const Examples = () => {
 
                 </div>
                 <div className="col-6">
-                    <h3>Functional Component</h3>
+                    <h3><Link to="/examples/functionalcompo">Functional Component</Link></h3>
                 </div>
             </div>
 
-            <h3>
+            {/* <h3>
                 <Link to="othercompo">Extra</Link>
-            </h3>
+            </h3> */}
 
             <div className="row my-3">
                 <div className="col-md-12">
