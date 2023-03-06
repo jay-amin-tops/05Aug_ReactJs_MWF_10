@@ -19,6 +19,7 @@ class ClassCompoMenu extends Component {
                     <li><Link to="functionalcompousememo">Functional useMemo</Link></li>
                     <li><Link to="functionalcompouseimperativehandle">Functional useImperativeHandle</Link></li>
                     <li><Link to="functionalcompouseref">Functional useRef</Link></li>
+                    <li><Link to="styledcompo">Styled Compo</Link></li>
                 </ul>
                 </div>
             </div>
